@@ -1,6 +1,6 @@
 # Spese App
 
-### Spese means espense in Italian.
+### Spese means expense in Italian.
 
 ## My Goal
 
