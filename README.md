@@ -12,7 +12,7 @@ In this project, I want to build an expense app that helps the user keep track o
 I've created so far.....
 
 ### // Add images (demo) here
-<!-- ![Finished App](https://github.com/msawo/sumakerr_survey/blob/master/images/simulator/sumakerr_survey_01.png) -->
+![Finished App](https://github.com/msawo/spese_app/blob/master/images/SimulatorScreenShot_01.png)
 
 
 ## What I have learned
