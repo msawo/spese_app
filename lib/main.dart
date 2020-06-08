@@ -34,6 +34,11 @@ class HomePage extends StatelessWidget {
     ),
   ];
 
+  // String titleInput;
+  // String amountInput;
+  final titleController = TextEditingController();
+  final amountController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     SystemChrome.setPreferredOrientations([
@@ -67,8 +72,13 @@ class HomePage extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(
                     horizontal: 12.0, vertical: 10.0),
                 child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.end,
                   children: <Widget>[
                     TextField(
+                      // onChanged: (value) {
+                      //   titleInput = value;
+                      // },
+                      controller: titleController,
                       decoration: InputDecoration(
                         labelText: 'Title',
                         hintText: 'i.e Groceries',
@@ -79,9 +89,13 @@ class HomePage extends StatelessWidget {
                         ),
                       ),
                       cursorColor: primaryColor,
-                      maxLength: 39,
+                      maxLength: 42,
                     ),
                     TextField(
+                      // onChanged: (value) {
+                      //   amountInput = value;
+                      // },
+                      controller: amountController,
                       decoration: InputDecoration(
                         labelText: 'Amount',
                         hintText: 'i.e \$40.99',
@@ -95,7 +109,10 @@ class HomePage extends StatelessWidget {
                       maxLength: 9,
                     ),
                     FlatButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        print(titleController.text);
+                        print(amountController.text);
+                      },
                       color: primaryColor,
                       child: Text(
                         'Add',
