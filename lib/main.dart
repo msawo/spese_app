@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
+import 'package:flutter/services.dart';
 
 import './transaction.dart';
-import 'package:flutter/services.dart';
 import './common.dart';
 
 void main() => runApp(SpeseApp());
@@ -42,7 +43,6 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
             // TODO: display the list of TX
@@ -60,6 +60,54 @@ class HomePage extends StatelessWidget {
                 color: Colors.blueGrey.shade300,
               ),
               flex: 3,
+            ),
+            Card(
+              elevation: 5,
+              child: Padding(
+                padding: const EdgeInsets.symmetric(
+                    horizontal: 12.0, vertical: 10.0),
+                child: Column(
+                  children: <Widget>[
+                    TextField(
+                      decoration: InputDecoration(
+                        labelText: 'Title',
+                        hintText: 'i.e Groceries',
+                        hintStyle: TextStyle(
+                          fontSize: 15,
+                          fontWeight: FontWeight.w300,
+                          color: secondaryText,
+                        ),
+                      ),
+                      cursorColor: primaryColor,
+                      maxLength: 39,
+                    ),
+                    TextField(
+                      decoration: InputDecoration(
+                        labelText: 'Amount',
+                        hintText: 'i.e \$40.99',
+                        hintStyle: TextStyle(
+                          fontSize: 15,
+                          fontWeight: FontWeight.w300,
+                          color: secondaryText,
+                        ),
+                      ),
+                      cursorColor: primaryColor,
+                      maxLength: 9,
+                    ),
+                    FlatButton(
+                      onPressed: () {},
+                      color: primaryColor,
+                      child: Text(
+                        'Add',
+                        style: TextStyle(
+                          fontSize: 16,
+                          color: white,
+                        ),
+                      ),
+                    )
+                  ],
+                ),
+              ),
             ),
             Flexible(
               flex: 7,
@@ -82,7 +130,7 @@ class HomePage extends StatelessWidget {
                           horizontal: 15.0,
                         ),
                         decoration: BoxDecoration(
-                          color: accentColor,
+                          color: primaryColor,
                           border: Border.all(
                             color: darkPrimaryColor,
                             width: 2.0,
@@ -92,7 +140,8 @@ class HomePage extends StatelessWidget {
                           vertical: 10.0,
                           horizontal: 15.0,
                         ),
-                        constraints: BoxConstraints(maxWidth: 100,minWidth: 100),
+                        constraints:
+                            BoxConstraints(maxWidth: 100, minWidth: 100),
                       ),
                       Flexible(
                         child: Column(
@@ -104,7 +153,7 @@ class HomePage extends StatelessWidget {
                                   TextStyle(color: primaryText, fontSize: 16),
                             ),
                             Text(
-                              tx.date.toString(),
+                              DateFormat.yMMMMd("en_US").format(tx.date),
                               style: TextStyle(
                                 color: secondaryText,
                                 fontSize: 14,
