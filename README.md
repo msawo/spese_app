@@ -10,8 +10,6 @@ In this project, I want to build an expense app that helps the user keep track o
 ## What I'll create
 
 I've created so far.....
-
-### // Add images (demo) here
 ![Finished App](https://github.com/msawo/spese_app/blob/master/images/SimulatorScreenShot_01.png)
 
 
@@ -21,7 +19,5 @@ I've created so far.....
 - Theming & Material Design
 - Working with Images & Fonts
 - Adding Business Login to an app
-
-
 
 >This app's Demo will be available soon at [www.msawo.com](https://www.msawo.com)
