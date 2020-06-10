@@ -27,25 +27,23 @@ class HomePage extends StatelessWidget {
       DeviceOrientation.portraitDown,
     ]);
     return Scaffold(
-      body: SingleChildScrollView(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: <Widget>[
-            Card(
-              child: Container(
-                width: double.infinity,
-                child: Text('CHART',
-                    style: TextStyle(
-                      fontSize: 19,
-                      color: primaryColor,
-                    )),
-              ),
-              elevation: 5,
-              color: Colors.blueGrey.shade300,
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: <Widget>[
+          Card(
+            child: Container(
+              width: double.infinity,
+              child: Text('CHART',
+                  style: TextStyle(
+                    fontSize: 19,
+                    color: primaryColor,
+                  )),
             ),
-            UserTransaction(),
-          ],
-        ),
+            elevation: 5,
+            color: Colors.blueGrey.shade300,
+          ),
+          UserTransaction(),
+        ],
       ),
     );
   }
