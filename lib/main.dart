@@ -12,7 +12,9 @@ class SpeseApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Spese App',
-      home: HomePage(),
+      home: SafeArea(
+        child: HomePage(),
+      ),
     );
   }
 }
@@ -25,29 +27,23 @@ class HomePage extends StatelessWidget {
       DeviceOrientation.portraitDown,
     ]);
     return Scaffold(
-      body: SafeArea(
+      body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
-            Flexible(
-              child: Card(
-                child: Container(
-                  width: double.infinity,
-                  child: Text('CHART',
-                      style: TextStyle(
-                        fontSize: 19,
-                        color: primaryColor,
-                      )),
-                ),
-                elevation: 5,
-                color: Colors.blueGrey.shade300,
+            Card(
+              child: Container(
+                width: double.infinity,
+                child: Text('CHART',
+                    style: TextStyle(
+                      fontSize: 19,
+                      color: primaryColor,
+                    )),
               ),
-              flex: 3,
+              elevation: 5,
+              color: Colors.blueGrey.shade300,
             ),
-            Flexible(
-              child: UserTransaction(),
-              flex: 9,
-            ),
+            UserTransaction(),
           ],
         ),
       ),

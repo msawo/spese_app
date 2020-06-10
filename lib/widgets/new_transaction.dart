@@ -12,15 +12,16 @@ class NewTransaction extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      elevation: 5,
-      child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 10.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.end,
-          children: <Widget>[
-            Expanded(
-              child: TextField(
+    return Container(
+      width: double.infinity,
+      child: Card(
+        elevation: 5,
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 10.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.end,
+            children: <Widget>[
+              TextField(
                 controller: titleController,
                 decoration: InputDecoration(
                   labelText: 'Title',
@@ -35,9 +36,7 @@ class NewTransaction extends StatelessWidget {
                 maxLength: 42,
                 textCapitalization: TextCapitalization.words,
               ),
-            ),
-            Expanded(
-              child: TextField(
+              TextField(
                 controller: amountController,
                 decoration: InputDecoration(
                   labelText: 'Amount',
@@ -51,24 +50,24 @@ class NewTransaction extends StatelessWidget {
                 cursorColor: primaryColor,
                 maxLength: 9,
               ),
-            ),
-            FlatButton(
-              onPressed: () {
-                transactionHandler(
-                  titleController.text,
-                  double.parse(amountController.text),
-                );
-              },
-              color: primaryColor,
-              child: Text(
-                'Add',
-                style: TextStyle(
-                  fontSize: 16,
-                  color: white,
+              FlatButton(
+                onPressed: () {
+                  transactionHandler(
+                    titleController.text,
+                    double.parse(amountController.text),
+                  );
+                },
+                color: primaryColor,
+                child: Text(
+                  'Add',
+                  style: TextStyle(
+                    fontSize: 16,
+                    color: white,
+                  ),
                 ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
