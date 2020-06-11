@@ -12,7 +12,6 @@ In this project, I want to build an expense app that helps the user keep track o
 I've created so far.....
 
 ![Finished App](https://github.com/msawo/spese_app/blob/master/images/SimulatorScreenShot_01.png)
-
 ![Finished App](https://github.com/msawo/spese_app/blob/master/images/SimulatorScreenShot_02.png)
 
 
