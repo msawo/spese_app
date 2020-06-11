@@ -13,19 +13,21 @@ class TransactionList extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 300,
-      child: ListView(
-        children: transactions.map((tx) {
+      child: ListView.builder(
+        itemCount: transactions.length,
+        itemBuilder: (ctx, index) {
           return Card(
             child: Row(
               children: <Widget>[
                 Container(
                   child: Text(
-                    '\$ ${tx.amount}',
+                    '\$ ${transactions[index].amount.toStringAsFixed(2)}',
                     style: TextStyle(
                       color: white,
                       fontSize: 16.0,
                       fontWeight: FontWeight.bold,
                     ),
+                    textAlign: TextAlign.center,
                   ),
                   margin: EdgeInsets.symmetric(
                     vertical: 15.0,
@@ -40,7 +42,7 @@ class TransactionList extends StatelessWidget {
                   ),
                   padding: EdgeInsets.symmetric(
                     vertical: 10.0,
-                    horizontal: 15.0,
+                    horizontal: 12.0,
                   ),
                   constraints: BoxConstraints(maxWidth: 100, minWidth: 100),
                 ),
@@ -50,11 +52,12 @@ class TransactionList extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
                         Text(
-                          tx.title,
+                          transactions[index].title,
                           style: TextStyle(color: primaryText, fontSize: 16),
                         ),
                         Text(
-                          DateFormat.yMMMMd("en_US").format(tx.date),
+                          DateFormat.yMMMMd("en_US")
+                              .format(transactions[index].date),
                           style: TextStyle(
                             color: secondaryText,
                             fontSize: 14,
@@ -68,7 +71,7 @@ class TransactionList extends StatelessWidget {
               ],
             ),
           );
-        }).toList(),
+        },
       ),
     );
   }
