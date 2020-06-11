@@ -12,9 +12,7 @@ class SpeseApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Spese App',
-      home: SafeArea(
-        child: HomePage(),
-      ),
+      home: HomePage(),
     );
   }
 }
@@ -27,25 +25,45 @@ class HomePage extends StatelessWidget {
       DeviceOrientation.portraitDown,
     ]);
     return Scaffold(
-      body: SingleChildScrollView(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: <Widget>[
-            Card(
-              child: Container(
-                width: double.infinity,
-                child: Text('CHART',
-                    style: TextStyle(
-                      fontSize: 19,
-                      color: primaryColor,
-                    )),
-              ),
-              elevation: 5,
-              color: Colors.blueGrey.shade300,
+      appBar: AppBar(
+        backgroundColor: primaryColor,
+        actions: <Widget>[
+          IconButton(
+            icon: Icon(
+              Icons.add,
+              size: 35,
             ),
-            UserTransaction(),
-          ],
+            onPressed: () {},
+          ),
+        ],
+      ),
+      body: SingleChildScrollView(
+        child: SafeArea(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: <Widget>[
+              Card(
+                child: Container(
+                  width: double.infinity,
+                  child: Text('CHART',
+                      style: TextStyle(
+                        fontSize: 19,
+                        color: primaryColor,
+                      )),
+                ),
+                elevation: 5,
+                color: Colors.blueGrey.shade300,
+              ),
+              UserTransaction(),
+            ],
+          ),
         ),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: primaryColor,
+        onPressed: () {},
+        child: Icon(Icons.add, color: white,),
       ),
     );
   }
