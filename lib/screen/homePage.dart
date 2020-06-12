@@ -77,12 +77,10 @@ class _HomePageState extends State<HomePage> {
             children: <Widget>[
               Card(
                 child: Container(
+                  height: 200,
+                  color: lightPrimaryColor,
                   width: double.infinity,
-                  child: Text('CHART',
-                      style: TextStyle(
-                        fontSize: 19,
-                        color: primaryColor,
-                      )),
+                  child: Placeholder(color: primaryColor,),
                 ),
                 elevation: 5,
                 color: Colors.blueGrey.shade300,
