@@ -17,7 +17,7 @@ class _HomePageState extends State<HomePage> {
       id: 'n1',
       amount: 187.98,
       date: DateTime.now(),
-      title: 'BURBERRY The City Silver Dial Men\'s Watch',
+      title: 'BURBERRY City Silver Dl Men\'s Watch',
     ),
     Transaction(
       id: 'n2',
@@ -64,7 +64,7 @@ class _HomePageState extends State<HomePage> {
           IconButton(
             icon: Icon(
               Icons.add,
-              size: 35,
+              size: 30,
             ),
             onPressed: () => _startTxProcess(context),
           ),
