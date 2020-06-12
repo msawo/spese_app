@@ -24,25 +24,26 @@ class TransactionList extends StatelessWidget {
                     '\$ ${transactions[index].amount.toStringAsFixed(2)}',
                     style: TextStyle(
                       color: white,
-                      fontSize: 16.0,
+                      fontSize: 13.0,
                       fontWeight: FontWeight.bold,
                     ),
                     textAlign: TextAlign.center,
                   ),
                   margin: EdgeInsets.symmetric(
-                    vertical: 15.0,
+                    vertical: 14.0,
                     horizontal: 15.0,
                   ),
                   decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(30.0),
                     color: primaryColor,
                     border: Border.all(
                       color: darkPrimaryColor,
-                      width: 2.0,
+                      width: 1.0,
                     ),
                   ),
                   padding: EdgeInsets.symmetric(
-                    vertical: 10.0,
-                    horizontal: 12.0,
+                    vertical: 8.0,
+                    horizontal: 8.0,
                   ),
                   constraints: BoxConstraints(maxWidth: 100, minWidth: 100),
                 ),
@@ -53,7 +54,11 @@ class TransactionList extends StatelessWidget {
                       children: <Widget>[
                         Text(
                           transactions[index].title,
-                          style: TextStyle(color: primaryText, fontSize: 16),
+                          style: TextStyle(
+                            color: primaryText,
+                            fontSize: 14.5,
+                            fontFamily: 'Roboto',
+                          ),
                         ),
                         Text(
                           DateFormat.yMMMMd("en_US")
@@ -61,6 +66,7 @@ class TransactionList extends StatelessWidget {
                           style: TextStyle(
                             color: secondaryText,
                             fontSize: 14,
+                            fontFamily: 'Roboto',
                             fontWeight: FontWeight.w300,
                           ),
                         )
