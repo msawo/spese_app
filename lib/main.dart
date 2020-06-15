@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import './common.dart';
 import './screen/homePage.dart';
 
 void main() => runApp(SpeseApp());
@@ -12,6 +13,13 @@ class SpeseApp extends StatelessWidget {
         primarySwatch: Colors.purple,
         accentColor: Colors.cyan,
         fontFamily: 'Bellota',
+        textTheme: ThemeData.light().textTheme.copyWith(
+              title: TextStyle(
+                color: primaryText,
+                fontSize: 16,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
         appBarTheme: AppBarTheme(
           textTheme: ThemeData.light().textTheme.copyWith(
                 title: TextStyle(

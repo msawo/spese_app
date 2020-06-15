@@ -48,7 +48,7 @@ class _NewTransactionState extends State<NewTransaction> {
                 controller: titleController,
                 onSubmitted: (_) => submitInput(),
                 decoration: InputDecoration(
-                  labelText: 'Title',labelStyle: TextStyle(height: 1.0),
+                  labelText: 'Title',
                   hintText: 'i.e Groceries',
                   hintStyle: TextStyle(
                     fontSize: 15,
