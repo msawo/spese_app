@@ -59,7 +59,14 @@ class _HomePageState extends State<HomePage> {
     ]);
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: primaryColor,
+        title: Text(
+          'Spese Tracking',
+          style: TextStyle(
+            fontSize: 22,
+            fontWeight: FontWeight.w200,
+          ),
+        ),
+        centerTitle: true,
         actions: <Widget>[
           IconButton(
             icon: Icon(
@@ -78,9 +85,11 @@ class _HomePageState extends State<HomePage> {
               Card(
                 child: Container(
                   height: 200,
-                  color: lightPrimaryColor,
+                  color: Theme.of(context).primaryColorLight,
                   width: double.infinity,
-                  child: Placeholder(color: primaryColor,),
+                  child: Placeholder(
+                    color: Theme.of(context).primaryColor,
+                  ),
                 ),
                 elevation: 5,
                 color: Colors.blueGrey.shade300,
@@ -94,7 +103,7 @@ class _HomePageState extends State<HomePage> {
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       floatingActionButton: FloatingActionButton(
-        backgroundColor: primaryColor,
+        // backgroundColor: Theme.of(context).primaryColor,
         onPressed: () => _startTxProcess(context),
         child: Icon(
           Icons.add,

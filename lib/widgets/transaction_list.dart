@@ -35,9 +35,9 @@ class TransactionList extends StatelessWidget {
                   ),
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(30.0),
-                    color: primaryColor,
+                    color: Theme.of(context).primaryColor,
                     border: Border.all(
-                      color: darkPrimaryColor,
+                      color: Theme.of(context).primaryColorDark,
                       width: 1.0,
                     ),
                   ),

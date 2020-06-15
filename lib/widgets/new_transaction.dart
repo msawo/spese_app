@@ -56,7 +56,7 @@ class _NewTransactionState extends State<NewTransaction> {
                     color: secondaryText,
                   ),
                 ),
-                cursorColor: primaryColor,
+                cursorColor: Theme.of(context).primaryColor,
                 maxLength: 42,
                 textCapitalization: TextCapitalization.words,
               ),
@@ -73,12 +73,12 @@ class _NewTransactionState extends State<NewTransaction> {
                     color: secondaryText,
                   ),
                 ),
-                cursorColor: primaryColor,
+                cursorColor: Theme.of(context).primaryColor,
                 maxLength: 9,
               ),
               FlatButton(
                 onPressed: submitInput,
-                color: primaryColor,
+                color: Theme.of(context).primaryColor,
                 child: Text(
                   'Add',
                   style: TextStyle(
