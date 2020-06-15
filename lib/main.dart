@@ -11,7 +11,16 @@ class SpeseApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.purple,
         accentColor: Colors.cyan,
-        fontFamily: 'Roboto',
+        fontFamily: 'Bellota',
+        appBarTheme: AppBarTheme(
+          textTheme: ThemeData.light().textTheme.copyWith(
+                title: TextStyle(
+                  fontFamily: 'Poiret',
+                  fontSize: 22,
+                  fontWeight: FontWeight.w200,
+                ),
+              ),
+        ),
       ),
       debugShowCheckedModeBanner: false,
       title: 'Spese App',
@@ -19,4 +28,3 @@ class SpeseApp extends StatelessWidget {
     );
   }
 }
-

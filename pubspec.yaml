@@ -57,25 +57,21 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
-    - family: Roboto
+    - family: Bellota
       fonts:
-        - asset: assets/fonts/Roboto/Roboto-Thin.ttf
+        - asset: assets/fonts/Bellota/Bellota-Light.ttf
           weight: 300
-        - asset: assets/fonts/Roboto/Roboto-ThinItalic.ttf
+        - asset: assets/fonts/Bellota/Bellota-LightItalic.ttf
           style: italic
-        - asset: assets/fonts/Roboto/Roboto-Regular.ttf
+        - asset: assets/fonts/Bellota/Bellota-Regular.ttf
           weight: 400
-        - asset: assets/fonts/Roboto/Roboto-Italic.ttf
+        - asset: assets/fonts/Bellota/Bellota-Italic.ttf
           style: italic
-        - asset: assets/fonts/Roboto/Roboto-Medium.ttf
-          weight: 500
-        - asset: assets/fonts/Roboto/Roboto-MediumItalic.ttf
-          style: italic
-        - asset: assets/fonts/Roboto/Roboto-Bold.ttf
+        - asset: assets/fonts/Bellota/Bellota-Bold.ttf
           weight: 700
-        - asset: assets/fonts/Roboto/Roboto-Black.ttf
-          weight: 900
-    - family: Poiret-One
+        - asset: assets/fonts/Bellota/Bellota-BoldItalic.ttf
+          style: italic
+    - family: Poiret
       fonts:
         - asset: assets/fonts/Poiret_One/PoiretOne-Regular.ttf
           weight: 400

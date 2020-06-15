@@ -56,8 +56,7 @@ class TransactionList extends StatelessWidget {
                           transactions[index].title,
                           style: TextStyle(
                             color: primaryText,
-                            fontSize: 14.5,
-                            fontFamily: 'Roboto',
+                            fontSize: 18,
                           ),
                         ),
                         Text(
@@ -66,7 +65,7 @@ class TransactionList extends StatelessWidget {
                           style: TextStyle(
                             color: secondaryText,
                             fontSize: 14,
-                            fontFamily: 'Roboto',
+                            height: 1.4,
                             fontWeight: FontWeight.w300,
                           ),
                         )

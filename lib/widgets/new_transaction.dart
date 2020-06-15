@@ -48,7 +48,7 @@ class _NewTransactionState extends State<NewTransaction> {
                 controller: titleController,
                 onSubmitted: (_) => submitInput(),
                 decoration: InputDecoration(
-                  labelText: 'Title',
+                  labelText: 'Title',labelStyle: TextStyle(height: 1.0),
                   hintText: 'i.e Groceries',
                   hintStyle: TextStyle(
                     fontSize: 15,
@@ -65,7 +65,7 @@ class _NewTransactionState extends State<NewTransaction> {
                 keyboardType: TextInputType.numberWithOptions(decimal: true),
                 onSubmitted: (_) => submitInput(), 
                 decoration: InputDecoration(
-                  labelText: 'Amount',
+                  labelText: 'Amount', labelStyle: TextStyle(height: 1.0),
                   hintText: 'i.e 40.99',
                   hintStyle: TextStyle(
                     fontSize: 15,

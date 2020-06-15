@@ -17,7 +17,7 @@ class _HomePageState extends State<HomePage> {
       id: 'n1',
       amount: 187.98,
       date: DateTime.now(),
-      title: 'BURBERRY City Silver Dl Men\'s Watch',
+      title: 'Burberry CitySilver Dl Men\'s Watch',
     ),
     Transaction(
       id: 'n2',
@@ -61,10 +61,6 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         title: Text(
           'Spese Tracking',
-          style: TextStyle(
-            fontSize: 22,
-            fontWeight: FontWeight.w200,
-          ),
         ),
         centerTitle: true,
         actions: <Widget>[
