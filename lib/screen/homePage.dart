@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:spese_app/widgets/chart.dart';
 
+import '../widgets/chart.dart';
 import '../widgets/new_transaction.dart';
 import '../models/transaction.dart';
 import '../widgets/transaction_list.dart';
@@ -26,6 +28,16 @@ class _HomePageState extends State<HomePage> {
     //   title: 'Stock purchase on Global Acct.',
     // ),
   ];
+
+  List<Transaction> get _recentTx {
+    return _userTransactions.where((tx) {
+      return tx.date.isAfter(
+        DateTime.now().subtract(
+          Duration(days: 7),
+        ),
+      );
+    }).toList();
+  }
 
   void _addNewTransaction(String txTitle, double txAmount) {
     final newTx = Transaction(
@@ -78,18 +90,7 @@ class _HomePageState extends State<HomePage> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
-              Card(
-                child: Container(
-                  height: 200,
-                  color: Theme.of(context).primaryColorLight,
-                  width: double.infinity,
-                  child: Placeholder(
-                    color: Theme.of(context).primaryColor,
-                  ),
-                ),
-                elevation: 5,
-                color: Colors.blueGrey.shade300,
-              ),
+              Chart(recentTx: _recentTx,),
               TransactionList(
                 transactions: _userTransactions,
               ),

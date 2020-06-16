@@ -13,6 +13,11 @@ In this project, I want to build an expense app that helps the user keep track o
 
 ![Finished App](https://github.com/msawo/spese_app/blob/master/assets/images/SimulatorScreenShot_01.png)
 ![Finished App](https://github.com/msawo/spese_app/blob/master/assets/images/SimulatorScreenShot_02.png)
+![Finished App](https://github.com/msawo/spese_app/blob/master/assets/images/SimulatorScreenShot_03.png)
+
+![Finished App](https://github.com/msawo/spese_app/blob/master/assets/images/SimulatorScreenShot_04.png)
+![Finished App](https://github.com/msawo/spese_app/blob/master/assets/images/SimulatorScreenShot_05.png)
+![Finished App](https://github.com/msawo/spese_app/blob/master/assets/images/SimulatorScreenShot_06.png)
 
 
 ## What I have learned
