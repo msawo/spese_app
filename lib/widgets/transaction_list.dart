@@ -44,14 +44,16 @@ class TransactionList extends StatelessWidget {
                   child: Row(
                     children: <Widget>[
                       Container(
-                        child: Text(
-                          '\$ ${transactions[index].amount.toStringAsFixed(2)}',
-                          style: TextStyle(
-                            color: white,
-                            fontSize: 13.0,
-                            fontWeight: FontWeight.bold,
+                        child: FittedBox(
+                          child: Text(
+                            '\$ ${transactions[index].amount.toStringAsFixed(2)}',
+                            style: TextStyle(
+                              color: white,
+                              fontSize: 13.0,
+                              fontWeight: FontWeight.bold,
+                            ),
+                            textAlign: TextAlign.center,
                           ),
-                          textAlign: TextAlign.center,
                         ),
                         margin: EdgeInsets.symmetric(
                           vertical: 14.0,
