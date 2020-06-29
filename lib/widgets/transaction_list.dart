@@ -41,6 +41,7 @@ class TransactionList extends StatelessWidget {
               itemCount: transactions.length,
               itemBuilder: (ctx, index) {
                 return Card(
+                  elevation: 3.0,
                   child: Row(
                     children: <Widget>[
                       Container(
