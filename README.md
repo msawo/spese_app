@@ -25,6 +25,6 @@ In this project, I want to build an expense app that helps the user keep track o
 - Widgets, Widges, Widges
 - Theming & Material Design
 - Working with Images & Fonts
-- Adding Business Login to an app
+- Adding Business Logic to an app
 
 >This app's Demo will be available soon at [www.msawo.com](https://www.msawo.com)
