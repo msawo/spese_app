@@ -52,6 +52,12 @@ class _HomePageState extends State<HomePage> {
     });
   }
 
+  void _deleteTx(String id) {
+    setState(() {
+      _userTransactions.removeWhere((tx) => tx.id == id);
+    });
+  }
+
   void _startTxProcess(BuildContext ctx) {
     showModalBottomSheet(
       context: ctx,
@@ -93,6 +99,7 @@ class _HomePageState extends State<HomePage> {
               Chart(recentTx: _recentTx,),
               TransactionList(
                 transactions: _userTransactions,
+                removeTxHandler: _deleteTx,
               ),
             ],
           ),
