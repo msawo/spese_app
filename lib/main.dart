@@ -12,6 +12,7 @@ class SpeseApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.purple,
         accentColor: Colors.cyan,
+        errorColor: Color(0xffe31c5f),
         fontFamily: 'Bellota',
         textTheme: ThemeData.light().textTheme.copyWith(
               title: TextStyle(
