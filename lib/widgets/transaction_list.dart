@@ -6,8 +6,9 @@ import '../common.dart';
 
 class TransactionList extends StatelessWidget {
   final List<Transaction> transactions;
+  final Function removeTxHandler;
 
-  TransactionList({this.transactions});
+  TransactionList({this.transactions, this.removeTxHandler});
 
   @override
   Widget build(BuildContext context) {
@@ -96,6 +97,14 @@ class TransactionList extends StatelessWidget {
                             ],
                           ),
                         ),
+                      ),
+                      Container(
+                        child: IconButton(
+                          icon: Icon(Icons.delete),
+                          onPressed: () => removeTxHandler(transactions[index].id),
+                          color: Theme.of(context).errorColor,
+                        ),
+                        constraints: BoxConstraints(maxWidth: 35),
                       ),
                     ],
                   ),
